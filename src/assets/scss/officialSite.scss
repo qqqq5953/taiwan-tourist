@@ -1,0 +1,81 @@
+.officialSite_section {
+  border: 1px solid #999;
+  border-radius: 14px;
+  margin-top: 60px;
+  color: $color-dark-50;
+  width: 100%;
+
+  @include pad {
+    margin-top: 30px;
+  }
+
+  @include mobile {
+    margin-top: 15px;
+  }
+
+  caption {
+    text-align: center;
+    font-size: $font-size-xl;
+    font-weight: bold;
+    padding: 20px 10px;
+
+    @include mobile {
+      font-size: $font-size-md;
+    }
+  }
+
+  table {
+    font-size: $font-size-md;
+    width: 100%;
+    table-layout: fixed;
+
+    @include pad {
+      font-size: $font-size-sm;
+    }
+
+    @include mobile {
+      font-size: $font-size-xs;
+    }
+  }
+
+  thead {
+    border-bottom: 0.5px solid #999;
+
+    th:first-of-type,
+    th:last-of-type {
+      padding: 20px 13px;
+      width: 20%;
+
+      @include mobile {
+        padding: 10px 0px;
+        width: 25%;
+      }
+    }
+  }
+
+  tbody {
+    tr + tr {
+      border-top: 1px solid #999;
+    }
+
+    tr:hover {
+      background-color: rgba(47, 121, 140, 0.4);
+      background-color: rgba(184, 215, 223, 0.5);
+      color: rgb(0, 0, 0);
+    }
+
+    td {
+      padding: 20px 13px;
+      line-height: 1.5;
+
+      @include mobile {
+        padding: 10px;
+        width: 25%;
+      }
+    }
+
+    td:nth-of-type(2) {
+      word-wrap: break-word;
+    }
+  }
+}

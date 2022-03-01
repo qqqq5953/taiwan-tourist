@@ -1,0 +1,493 @@
+.info_section {
+  padding: 33px 101px;
+
+  @include mobile {
+    padding: 15px 50px 11px;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 34px;
+    color: $color-dark-50;
+    line-height: 1.2;
+  }
+  .badge {
+    background: $color-primary;
+    font-size: $font-size-md;
+    margin: 34px 0;
+    padding: 6px;
+    color: #fff;
+    display: inline-block;
+
+    @include pad {
+      margin: 25px 0;
+    }
+
+    @include mobile {
+      margin: 17px 0;
+      font-size: $font-size-xs;
+    }
+  }
+}
+
+.info_content {
+  display: flex;
+
+  @include pad {
+    display: block;
+  }
+
+  .info_img {
+    background: linear-gradient(
+      45deg,
+      rgba(47, 122, 140, 0.85),
+      rgba(47, 201, 255, 0.7)
+    );
+    width: 65%;
+    height: 549px;
+    margin-right: 68px;
+    flex-shrink: 0;
+    position: relative;
+
+    @include pad {
+      width: 100%;
+      border-radius: 10px;
+      height: 385px;
+    }
+
+    @include mobile {
+      height: 179px;
+    }
+
+    img {
+      width: 100%;
+      height: 549px;
+      object-fit: cover;
+
+      img[alt] {
+        display: none;
+      }
+
+      @include pad {
+        border-radius: 10px;
+        height: 385px;
+      }
+
+      @include mobile {
+        height: 179px;
+      }
+
+      &::after {
+        content: 'Sorry! 無法顯示圖片';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size-xxxl;
+        font-weight: bold;
+
+        @include pad {
+          font-size: $font-size-md;
+        }
+      }
+    }
+  }
+
+  .info_details {
+    & div + div {
+      margin-top: 30px;
+    }
+
+    @include pad {
+      margin-top: 36px;
+    }
+
+    h3 {
+      font-size: $font-size-xxl;
+      color: $color-dark-50;
+      font-weight: bold;
+      margin-bottom: 40px;
+
+      @include mobile {
+        font-size: $font-size-md;
+      }
+    }
+
+    h4 {
+      font-size: $font-size-lg;
+      color: $color-dark-50;
+      font-weight: bold;
+      margin-bottom: 5px;
+      flex-shrink: 0;
+
+      @include mobile {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
+
+    .info_details_phone,
+    .info_details_address,
+    .info_details_openTime {
+      font-size: $font-size-lg;
+      line-height: 1.5;
+
+      @include mobile {
+        font-size: $font-size-sm;
+        line-height: 1.2;
+      }
+
+      a {
+        background: $color-primary;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+
+        &:hover,
+        &:focus {
+          background-color: rgba(63, 156, 179, 1);
+        }
+
+        @include mobile {
+          width: 35px;
+          height: 35px;
+          margin-left: auto;
+        }
+      }
+
+      .fa-copy,
+      .fa-map-marked-alt {
+        color: #fff;
+        font-size: 20px;
+      }
+    }
+
+    .info_details_phone {
+      input {
+        display: none;
+        outline: none;
+        border: none;
+        appearance: none;
+      }
+
+      .info_details_phone_wrap {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        span {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .info_details_address {
+      margin-bottom: 15px;
+
+      .info_details_address-wrap {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        span {
+          display: inline-block;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .info_details_openTime {
+      line-height: 1.5;
+
+      @include pad {
+        display: flex;
+      }
+    }
+  }
+}
+
+.content {
+  background-color: $color-secondary;
+  padding: 34px 101px;
+
+  @include mobile {
+    padding: 12px 50px;
+    font-size: $font-size-sm;
+  }
+
+  h3 {
+    font-size: $font-size-xxl;
+    color: $color-dark-50;
+    font-weight: bold;
+
+    @include mobile {
+      font-size: $font-size-md;
+    }
+  }
+
+  article {
+    font-size: $font-size-md;
+    margin: 50px 0 67px;
+    line-height: 1.7;
+    letter-spacing: 1px;
+
+    @include mobile {
+      font-size: $font-size-sm;
+      margin: 30px 0 45px;
+    }
+  }
+
+  p {
+    font-size: $font-size-lg;
+    font-weight: bold;
+    margin: 38px 0 30px;
+    color: #888888;
+
+    @include mobile {
+      font-size: $font-size-sm;
+      margin: 19px 0 15px;
+    }
+  }
+
+  .search_by_type {
+    display: flex;
+    letter-spacing: 1px;
+    margin-bottom: 26px;
+
+    @include pad {
+      justify-content: space-between;
+    }
+
+    .search_by_type_btn {
+      // outline: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-decoration: none;
+
+      &:hover .search_by_type_icon,
+      &:focus .search_by_type_icon {
+        background: rgba(69, 114, 227, 0.85);
+      }
+
+      &:hover .search_by_type_icon + span,
+      &:focus .search_by_type_icon + span {
+        color: rgba(69, 114, 227, 0.75);
+      }
+
+      .search_by_type_icon {
+        width: 70px;
+        height: 70px;
+        background: rgba(69, 114, 227, 1);
+        border-radius: 50%;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 4px 16px rgba(51, 51, 51, 0.2);
+
+        @include pad {
+          width: 55px;
+          height: 55px;
+        }
+
+        @include mobile {
+          width: 40px;
+          height: 40px;
+        }
+
+        .fas {
+          @include pad {
+            font-size: $font-size-lg;
+          }
+
+          @include mobile {
+            font-size: $font-size-md;
+          }
+        }
+
+        .fas.fa-bed {
+          margin-left: 3px;
+        }
+      }
+
+      span {
+        color: rgba(69, 114, 227, 1);
+        font-size: $font-size-lg;
+        text-shadow: 0px 4px 16px rgba(51, 51, 51, 0.2);
+
+        @include pad {
+          font-size: $font-size-sm;
+        }
+
+        @include mobile {
+          font-size: $font-size-xs;
+        }
+      }
+    }
+
+    .search_by_type_btn + .search_by_type_btn {
+      margin-left: 55px;
+
+      @include pad {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .map_section_details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include pad {
+      display: block;
+    }
+
+    .map_wrap {
+      width: 61%;
+
+      @include pad {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      @include mobile {
+        margin-bottom: 15px;
+      }
+
+      .noDataWarning {
+        padding: 15px;
+        background-color: #cb2b3e;
+        color: #efefef;
+        font-size: $font-size-lg;
+
+        @include pad {
+          padding: 5px 10px;
+          font-size: 16px;
+        }
+
+        @include mobile {
+          font-size: $font-size-xxs;
+        }
+      }
+
+      .map_default {
+        background-color: #999;
+        position: relative;
+        width: 100%;
+        height: 487px;
+
+        @include mobile {
+          height: 215px;
+        }
+
+        &::before {
+          content: '地圖載入中...';
+          position: absolute;
+          top: 50%;
+          bottom: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          color: #fff;
+          font-size: $font-size-xxl;
+        }
+      }
+    }
+
+    .hasOfficialSiteBtn {
+      border: 1px solid $color-primary;
+      border-radius: 14px;
+      background-color: $color-primary;
+
+      padding: 20px 25px;
+
+      display: block;
+      flex-shrink: 0;
+
+      line-height: 1.5;
+      letter-spacing: 1.5px;
+      color: #fff;
+      text-decoration: none;
+
+      cursor: pointer;
+      align-self: flex-end;
+
+      @include btn-hover;
+
+      @include mobile {
+        padding: 10px 25px;
+        margin-top: 0px;
+      }
+
+      .hasOfficialSiteText {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          font-size: $font-size-xxl;
+          margin-right: 10px;
+          font-weight: bold;
+
+          @include pad {
+            font-size: $font-size-lg;
+          }
+
+          @include mobile {
+            font-size: $font-size-sm;
+          }
+        }
+      }
+
+      span {
+        font-size: $font-size-lg;
+
+        @include pad {
+          font-size: $font-size-md;
+        }
+
+        @include mobile {
+          font-size: $font-size-xs;
+        }
+      }
+    }
+  }
+}
+
+// 地圖
+.custom-popup-red .leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+  color: #cb2b3e !important;
+  font-size: $font-size-xl;
+  font-weight: bold;
+}
+
+.custom-popup-blue .leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: none;
+  color: #2a81cb;
+  font-size: $font-size-lg;
+  font-weight: bold;
+}
+
+.custom-popup-green .leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: none;
+  color: #31882a;
+  font-size: $font-size-lg;
+  font-weight: bold;
+}

@@ -1,0 +1,52 @@
+.nav {
+  padding: 39px 57px 0;
+
+  @include mobile {
+    padding-top: 16px;
+    padding-left: 27px;
+  }
+
+  h1 {
+    display: inline-block;
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      .logo {
+        display: block;
+        width: 70px;
+        height: 72px;
+
+        @include pad {
+          width: 50px;
+          height: 52px;
+        }
+
+        @include mobile {
+          width: 42px;
+          height: 43px;
+        }
+      }
+
+      .websiteName {
+        display: block;
+        margin-left: 14px;
+        width: 235px;
+        height: 36px;
+        object-fit: cover;
+        object-position: left center;
+
+        @include pad {
+          width: 160px;
+          height: 25px;
+        }
+
+        @include mobile {
+          width: 98px;
+          height: 14px;
+        }
+      }
+    }
+  }
+}

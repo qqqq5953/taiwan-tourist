@@ -1,0 +1,194 @@
+.header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(53, 53, 53, 0.4);
+  background-blend-mode: multiply;
+
+  .banner {
+    padding: 55px 0 70px;
+    text-align: center;
+    width: 100%;
+
+    @include pad {
+      padding: 35px 10% 55px;
+    }
+
+    @include mobile {
+      padding: 25px 32px 55px;
+    }
+  }
+
+  .banner_title {
+    font-size: $font-size-xxxl;
+    font-weight: bold;
+    color: $color-white-50;
+    line-height: 1.2;
+    margin-bottom: 25px;
+
+    @include pad {
+      font-size: $font-size-xxl;
+      margin-bottom: 15px;
+    }
+
+    @include mobile {
+      font-size: $font-size-xl;
+      margin-bottom: 10px;
+    }
+  }
+
+  .banner_subtitle {
+    font-size: $font-size-xxl;
+    font-weight: bold;
+    color: $color-white-50;
+    line-height: 1.2;
+
+    @include pad {
+      font-size: $font-size-lg;
+    }
+
+    @include mobile {
+      font-size: $font-size-md;
+    }
+  }
+
+  .banner_search {
+    margin-top: 35px;
+    margin-bottom: 60px;
+    padding: 0 19.7%;
+    display: flex;
+    justify-content: center;
+
+    @include pad {
+      margin-bottom: 35px;
+      padding: 0;
+    }
+
+    @include mobile {
+      margin-top: 26px;
+      margin-bottom: 0px;
+    }
+  }
+
+  .banner_searchBar {
+    width: 78.4%;
+    position: relative;
+
+    input[type='text'] {
+      width: 100%;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      padding: 20px 0px 20px 24px;
+      font-size: $font-size-xl;
+      line-height: 1.2;
+      background-color: $color-white-50;
+
+      @include pad {
+        font-size: $font-size-md;
+        padding: 16px 0px 16px 16px;
+        border-radius: 10px;
+      }
+
+      @include mobile {
+        font-size: $font-size-sm;
+        padding: 13px 0px 13px 13px;
+      }
+    }
+
+    .fa-search {
+      line-height: 1.2;
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      color: #797979;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      @include pad {
+        font-size: $font-size-md;
+        width: 21px;
+        height: 21px;
+      }
+
+      @include mobile {
+        font-size: $font-size-sm;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  .banner_filterBtn,
+  .banner_searchBtn {
+    @include btn-reset;
+    font-size: 22px;
+    text-decoration: none;
+  }
+
+  .banner_filterBtn {
+    @include btn-rectangle;
+    @include btn-hover;
+    margin-left: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 19.5%;
+
+    @include pad {
+      padding: 16px 20px;
+      border-radius: 10px;
+    }
+
+    @include mobile {
+      padding: 12px 10px;
+      border-radius: 8px;
+      margin-left: 11px;
+    }
+
+    .banner_filterIcon {
+      line-height: 1.2;
+
+      .fa-bars {
+        display: block;
+        font-size: 23px;
+
+        @include pad {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .banner_filterText {
+      font-size: 22px;
+      line-height: 1.2;
+      margin-left: 8%;
+
+      @include pad {
+        font-size: 16px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  .banner_searchBtn {
+    @include btn-pill;
+    @include btn-hover;
+    display: block;
+    margin: 0 auto;
+    width: 219px;
+
+    @include pad {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
