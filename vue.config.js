@@ -13,5 +13,5 @@ module.exports = {
     }
   },
 
-  publicPath: '/tourist-site-project/dist/'
+  publicPath: '/taiwan-tourist/dist/'
 }
