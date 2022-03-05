@@ -14,7 +14,6 @@ export default {
   created() {
     // 從 HeaderSection 傳來
     this.emitter.on('activate_mask', (data) => {
-      console.log('遮罩是否打開?', data);
       this.maskStatus = data;
     });
   }
